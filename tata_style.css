@@ -1,0 +1,1312 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #383737;
+    --primary-color-dark: black;
+    --text-dark: #0c0a09;
+    --text-light: #78716c;
+    --secondary-text: lightslategray;
+    --white: #ffffff;
+}
+
+.primary-link {
+    font-family: "Noto Sans", sans-serif;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.primary-para {
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-family: "Noto Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.primary-head {
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.secondary-para {
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: "Noto Sans", sans-serif;
+
+}
+
+.para-gray {
+    color: #78716c;
+}
+
+.paragray {
+    color: lightgray;
+}
+
+.headwhite,
+.para-white {
+    color: white;
+}
+
+.secondary-head {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.gridwhiteposition {
+    width: 80%;
+    height: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 20px;
+    position: relative;
+    top: 30px;
+    left: 3rem;
+}
+
+
+
+nav {
+    width: 100%;
+    height: 90px;
+    box-shadow: 0px 3px 5px rgb(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 80px;
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-items {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-family: "Noto Sans", sans-serif;
+        font-weight: 500;
+
+        a {
+            color: var(--primary-color-dark);
+            text-decoration: none;
+            position: relative;
+        }
+
+        a::before {
+            content: "";
+            height: 3px;
+            width: 0%;
+            display: inline-block;
+            background-color: black;
+            position: absolute;
+            top: 30px;
+            border-radius: 20px;
+        }
+
+        a:hover::before {
+            width: 100%;
+            transition: all .3s linear;
+        }
+    }
+
+    .nav-icon {
+        display: flex;
+        gap: 40px;
+
+        a i {
+            font-size: 220%;
+            font-weight: 400;
+        }
+    }
+}
+
+/* contact section starts */
+.contact {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 46rem;
+    background-color: #383737;
+    box-shadow: -1px -1px 5px rgb(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 2px;
+    z-index: 10;
+
+
+    a span i {
+        font-size: 120%;
+        font-weight: 300;
+        color: rgb(248, 248, 248);
+        animation: zoom-up .5s linear infinite alternate;
+
+    }
+
+    hr {
+        height: 2rem;
+        position: absolute;
+        left: 47.5rem;
+    }
+
+    .call,
+    .test-drive {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+    }
+
+}
+
+@keyframes zoom-up {
+    to {
+        transform: scale(1.2);
+    }
+
+}
+
+/* contact section ends */
+
+/* home section starts */
+.home {
+    width: 100%;
+    height: 35rem;
+    background: linear-gradient(90deg, transparent 58%, #caac7c 58%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 1px;
+
+    p {
+        width: 450px;
+        text-align: left;
+        color: lightslategray;
+    }
+
+    .home-text {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        position: relative;
+        top: 35px;
+        left: -50px;
+        margin-bottom: 20px;
+    }
+
+    .book {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+        margin-top: 50px;
+    }
+
+    .book-now {
+        display: inline;
+        padding: 10px;
+        border: 2px solid #307fe2;
+    }
+
+    .book-now a,
+    .test-drive a {
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 300;
+        font-family: "Noto Sans", sans-serif;
+        color: #307fe2;
+    }
+
+    /* right nav and bottom nav starts here */
+    .right-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: fixed;
+        right: 20px;
+        z-index: 10;
+
+        a {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            text-decoration: none;
+            background-color: rgb(151, 136, 112);
+        }
+
+        p {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            visibility: hidden;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+            background-color: #383737;
+            p {
+                text-align: center;
+                width: 90px;
+                display: inline-block;
+                background-color: black;
+                color: #ffffff;
+                visibility: visible;
+                transition: none;
+                font-weight: 100;
+            }
+        }
+
+    }
+
+    .right-bottom {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        position: fixed;
+        top: 35rem;
+        left: 86rem;
+        z-index: 10;
+
+        .arrow {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            border: 2px rgb(0, 0, 0, 0.3) solid;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .bottom-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap: 35px;
+        position: absolute;
+        bottom: 100px;
+        right: 15%;
+
+        a {
+            text-decoration: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px black solid;
+        }
+
+        a:nth-child(1) {
+            background-color: rgb(202, 172, 124);
+        }
+
+        a:nth-child(2) {
+            background-color: rgb(219, 218, 223);
+        }
+
+        a:nth-child(3) {
+            background-color: rgb(0, 97, 170);
+
+        }
+
+        a:nth-child(4) {
+            background-color: rgb(108, 115, 121);
+
+        }
+    }
+
+    /* right nav and bottom nav ends here */
+
+}
+
+/* home section ends */
+/* home-price starts here */
+.home-price {
+    width: 100%;
+    height: 350px;
+    background-color: #383737;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+    .Benefits {
+        width: 1000px;
+        height: 100%;
+        display: flex;
+        margin-top: 20px;
+        margin-left: 145px;
+        flex-direction: column;
+        padding: 20px;
+
+        .primary-para1 {
+            font-size: 18px;
+        }
+
+        .loc {
+            height: 30px;
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 100px;
+            color: white;
+            background-color: #383737;
+            border: none;
+            border-bottom: 2px solid white;
+        }
+
+        .cities {
+            height: 180px;
+            width: 440px;
+            background-color: rgb(43, 43, 43);
+            box-shadow: 1px 1px 10px black;
+            position: absolute;
+            border: none;
+            top: 770px;
+            left: 160px;
+            color: white;
+        }
+
+        .cities input {
+            width: 100%;
+            height: 20px;
+            background-color: #383737;
+            outline: none;
+            border: none;
+            color: white;
+            border-bottom: 2px white solid;
+        }
+
+        /* customised Scroll bar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #6e6e6e;
+            height: 35px;
+
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #EEEEEE;
+            height: 15px;
+            border-radius: 20px;
+            box-shadow: 1px 1px 3px 3px #ebefeb inset;
+        }
+    }
+
+    .Starting {
+        width: 100%;
+        height: 150px;
+        background-color: #383737;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 50px;
+
+        .variants {
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+            position: relative;
+            top: 40px;
+            left: 25px;
+
+            h1 {
+                color: white;
+                font-size: 3rem;
+            }
+        }
+
+        .bookn {
+            position: relative;
+            top: 40px;
+            left: 25px;
+        }
+
+        .bookn a {
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 200;
+            color: whitesmoke;
+            border: 2px solid #fcfeff;
+            padding: 10px;
+        }
+    }
+
+}
+
+/* home-price ends here */
+/* design section starts here */
+.design {
+    width: 100%;
+    height: 196rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+
+    .design-sec {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        iframe {
+            width: 100%;
+            height: 70rem;
+            margin: 20px 0px 20px 0px;
+        }
+
+        .innerdes {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 400px 400px 400px 400px;
+            grid-template-areas: "left1 right1"
+                "left2 right2"
+                "left3 right3"
+                "left4 right4";
+            row-gap: 20px;
+
+            .left1 {
+                grid-area: left1;
+
+                p {
+                    margin-bottom: 30px;
+
+                }
+
+                .p1 {
+                    font-size: 22px;
+                    line-height: 1.2;
+                }
+
+                position: relative;
+                top:80px;
+                left: 40px;
+                line-height: 20px;
+            }
+
+            .right1 {
+                grid-area: right1;
+                background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/grille-crop?$TT-614-400-D$&fit=crop&fmt=webp");
+            }
+
+            .left2 {
+                grid-area: left2;
+                background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/oyster-white-interior-theme?$TT-614-400-D$&fit=crop&fmt=webp");
+                background-repeat: no-repeat;
+            }
+
+            .right2 {
+                grid-area: right2;
+
+                .secondary-head1 {
+                    margin-top: 25px;
+                }
+
+                .p1 {
+                    margin-top: 40px;
+                    font-size: 22px;
+                    line-height: 1.2;
+                }
+
+                position: relative;
+                top:80px;
+                left: 40px;
+                line-height: 20px;
+            }
+
+            .left3 {
+                grid-area: left3;
+
+                .secondary-head1 {
+                    margin-top: 25px;
+                }
+
+                .p1 {
+                    margin-top: 40px;
+                    font-size: 22px;
+                    line-height: 1.2;
+                }
+
+                position: relative;
+                top:80px;
+                left: 60px;
+                line-height: 20px;
+
+            }
+
+            .right3 {
+                grid-area: right3;
+                background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/MultiMoodLights-50?$IS-1020-555-D$&fit=crop&fmt=webp-alpha");
+                background-size: cover;
+            }
+
+            .left4 {
+                grid-area: left4;
+                background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/powered-tail-gate-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            }
+
+            .right4 {
+                grid-area: right4;
+
+                p {
+                    margin-bottom: 30px;
+
+                }
+
+                .p1 {
+                    font-size: 22px;
+                    line-height: 1.2;
+                }
+
+                position: relative;
+                top:110px;
+                left: 50px;
+                line-height: 20px;
+
+                a {
+                    color: #307fe2;
+                    text-decoration: 2px underline #307fe2 solid;
+                    position: relative;
+                    top: 40px;
+                }
+            }
+        }
+
+        .safari-image img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+
+/* design section ends here */
+/* safety section starts here  */
+.safety {
+    background-color: rgb(40, 40, 40);
+    width: 100%;
+    height: 83rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1px;
+    gap: 10px;
+
+    .safety1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+    .innersaf1 {
+        width: 80%;
+        height: 50rem;
+        margin-top: 5px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 450px 100px 450px;
+        grid-template-areas: "r1 r12"
+            "r2 r2"
+            "r3 r13";
+        row-gap: 50px;
+
+        .left1 {
+            grid-area: r1;
+
+            a {
+                font-size: 20px;
+                color: var(--text-light);
+                text-decoration: none;
+                margin-top: 10px;
+                line-height: 2rem;
+                display: flex;
+                flex-direction: column;
+            }
+
+            a:hover {
+                color: var(--white);
+            }
+
+            .splink a {
+                color: white;
+                width: 100%;
+                padding: 10px;
+                text-decoration: 2px #307fe2 underline solid;
+                text-underline-offset: 10px;
+            }
+
+        }
+
+        .right1 {
+            grid-area: r12;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/gncap-5start-safety?$FL-614-420-S$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .contain {
+            font-size: 20px;
+            grid-area: r2;
+            color: #fcfeff;
+            width: 80%;
+            line-height: 1;
+            display: flex;
+            justify-content: left;
+            position: relative;
+            left: 530px;
+        }
+
+        .left2 {
+            grid-area: r3;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/epb-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .right2 {
+            grid-area: r13;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            position: relative;
+            top: 50px;
+            left: 50px;
+
+        }
+
+    }
+}
+
+/* safety section ends here  */
+/* adas section starts here  */
+.adas {
+    background-color: white;
+    width: 100%;
+    height: 1880px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    .innergrid {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 560px 560px 560px;
+        grid-template-areas: "l1 r1"
+            "l2 r2"
+            "l3 r3";
+        row-gap: 20px;
+        margin-bottom: 20px;
+
+        .l1 {
+            grid-area: l1;
+        }
+
+        .l2 {
+            grid-area: l2;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotorsperf/ADASwithACC-74?$IS-1020-555-T$&fit=crop&fmt=webp-alpha");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .l3 {
+            grid-area: l3;
+
+        }
+
+        .r1 {
+            grid-area: r1;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/autonomous-emergency-braking-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .r2 {
+            grid-area: r2;
+        }
+
+        .r3 {
+            grid-area: r3;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/lane-departure-warning-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+/* adas section ends here  */
+/*  performance section starts here*/
+.performance {
+    background-color: rgb(40, 40, 40);
+    width: 100%;
+    height: 640px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .per {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .innergrid {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+
+        .left {
+            width: 95rem;
+            height: 27rem;
+            margin-left: 10px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .right {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            position: relative;
+            top: 100px;
+            left: 50px;
+        }
+    }
+}
+
+/*  performance section ends here*/
+/*  technology section starts here*/
+.technology {
+    width: 100%;
+    height: 85rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+
+    .tech {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+
+    .innergrid {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 560px 560px;
+        grid-template-areas: "l1 r1"
+            "l2 r2";
+        row-gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .l1 {
+        grid-area: l1;
+    }
+
+    .l2 {
+        grid-area: l2;
+        background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/harman-touchscreen-info?$TT-614-400-D$&fit=crop&fmt=webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .r1 {
+        grid-area: r1;
+        background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/ira-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .r2 {
+        grid-area: r2;
+    }
+
+}
+
+.customer-delight {
+    background-color: rgb(40, 40, 40);
+    width: 100%;
+    height: 425rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .del {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 35px;
+        padding: 5px;
+        margin-bottom: 40px;
+    }
+
+    .gridgrayposition {
+        width: 90%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin-top: 20px;
+        top: 10rem;
+        left: 25px;
+        color: white;
+        gap: 10px;
+        animation: textup 3s ease-in forwards;
+    }
+
+    .innergrid1 {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 450px 450px 450px 450px 450px 450px 450px 450px 450px 450px 450px 450px 450px 450px;
+        grid-template-areas: "l1 r1"
+            "l2 r2"
+            "l3 r3"
+            "l4 r4"
+            "l5 r5"
+            "l6 r6"
+            "l7 r7"
+            "l8 r8"
+            "l9 r9"
+            "l10 r10"
+            "l11 r11"
+            "l12 r12"
+            "l13 r13"
+            "l14 r14"
+
+        ;
+        row-gap: 20px;
+        margin-bottom: 20px;
+
+        .l1 {
+            grid-area: l1;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/sunroof-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .r1 {
+            grid-area: r1;
+        }
+
+        .l2 {
+            grid-area: l2;
+        }
+
+        .r2 {
+            grid-area: r2;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/powered-tail-gate-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .l3 {
+            grid-area: l3;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/DualzoneFATC-50?$IS-1020-555-D$&fit=crop&fmt=webp-alpha");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .r3 {
+            grid-area: r3;
+        }
+
+        .l4 {
+            grid-area: l4;
+        }
+
+        .r4 {
+            grid-area: r4;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/VentilatedSeats-50-2?$IS-1020-555-D$&fit=crop&fmt=webp-alpha");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .l5 {
+            grid-area: l5;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/way-powered-driver-seat-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .r5 {
+            grid-area: r5;
+        }
+
+        .l6 {
+            grid-area: l6;
+        }
+
+        .r6 {
+            grid-area: r6;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/4-way-powered-co-driver-seat-image-rewind?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .l7 {
+            grid-area: l7;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/2nd-row-comfort-head-rest-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .r7 {
+            grid-area: r7;
+        }
+
+        .l8 {
+            grid-area: l8;
+        }
+
+        .r8 {
+            grid-area: r8;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/luxorious-3rd-row-seats-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .l9 {
+            grid-area: l9;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/3rd-row-ac-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .r9 {
+            grid-area: r9;
+        }
+
+        .l10 {
+            grid-area: l10;
+        }
+
+        .r10 {
+            grid-area: r10;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/intelligent-spaces-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .l11 {
+            grid-area: l11;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/air-purifier-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .r11 {
+            grid-area: r11;
+        }
+
+        .l12 {
+            grid-area: l12;
+        }
+
+        .r12 {
+            grid-area: r12;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/wireless-charger-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .l13 {
+            grid-area: l13;
+
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/front-armrest-with-cooled-storage-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .r13 {
+            grid-area: r13;
+        }
+
+        .l14 {
+            grid-area: l14;
+        }
+
+        .r14 {
+            grid-area: r14;
+
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/rain-sensing-wipers-new-safari?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+}
+
+@keyframes textup {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-120px);
+    }
+
+}
+
+.dealership {
+    width: 100%;
+    height: 105rem;
+    background-color: rgb(241, 241, 241);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1;
+    gap: 20px;
+
+    .dealership1 {
+        width: 80%;
+        height: 500px;
+        background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/safari-book-test-drive?$B-1228-488-D$&fit=crop&fmt=webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 50px;
+    }
+
+    .dealership2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+        height: 500px;
+
+        .left {
+            width: 50%;
+            height: 100%;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/safari-blue-book-test-drive?$TT-614-400-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: zoom 5s ease-in forwards;
+        }
+
+
+        .right {
+            width: 50%;
+            height: 100%;
+            position: relative;
+            top: 110px;
+            left: 50px;
+            line-height: 20px;
+
+            p {
+                margin-bottom: 30px;
+            }
+
+            .p1 {
+                font-size: 22px;
+                line-height: 1.2;
+            }
+
+            a {
+                color: #307fe2;
+                font-size: 1.5rem;
+                text-decoration: 2px underline #307fe2 solid;
+                position: relative;
+                top: 150px;
+            }
+        }
+
+
+    }
+
+    .dealership3 {
+        width: 80%;
+        height: 650px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: ghostwhite;
+
+        .left {
+            width: 50%;
+            height: 100%;
+            position: relative;
+            top: 110px;
+            left: 50px;
+            line-height: 20px;
+
+            p {
+                margin-bottom: 30px;
+
+            }
+
+            .p1 {
+                font-size: 22px;
+                line-height: 1.2;
+            }
+
+            a {
+                color: #307fe2;
+                font-size: 1.5rem;
+                text-decoration: 2px underline #307fe2 solid;
+                position: relative;
+                top: 200px;
+            }
+
+
+        }
+
+        .right {
+            width: 50%;
+            height: 100%;
+            background-image: url("https://s7ap1.scene7.com/is/image/tatamotors/all-pv-banner?$BB-1228-490-D$&fit=crop&fmt=webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.9)
+    }
+
+}
+
+/* footer start here */
+footer {
+    width: 100%;
+    height: 350px;
+    background-color: #383737;
+    display: flex;
+    flex-direction: row;
+
+    .left {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 45px;
+        left: 7rem;
+
+        img {
+            width: 75px;
+            height: 75px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .Copyright {
+            color: var(--text-light);
+            position: relative;
+            top: 11rem;
+        }
+    }
+
+    .right {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+footer .right .QuickLinks,
+footer .right .Social {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 50px;
+    gap: 20px;
+
+    a {
+        width: 100%;
+        height: 23;
+        font-size: 1rem;
+        text-decoration: none;
+        color: white;
+    }
+
+    h1 {
+        font-size: 2rem;
+        color: white;
+    }
+}
+
+/* footer ends here */
